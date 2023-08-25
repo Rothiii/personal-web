@@ -346,18 +346,21 @@ footer p{
 @media screen and (max-width: 800px){
 
     /*-----Side Nav-----*/
-
+    body > header {
+        position: sticky;
+    }
     #sideNav{
-        width: 165px;
-        height: 100vh;
-        position: fixed;
+        display: inline;
         right: -250px;
-        top: 0;
+        top: 0px;
         z-index: 2;
         transition: 1s;
+        position: static;
     }
     #sideNav ul {
-        gap: 0.5rem;
+        border-radius: 0px 0px 10px 10px;
+        flex-flow: row;
+        gap: 2rem;
     }
     #sideNav ul li a{
         text-decoration: none;
@@ -366,9 +369,11 @@ footer p{
         transition: 1s;
     }
     #menuBtn{
-        top: 300px;
-        width: 40px;
-        right: 40px;
+        display: none;
+        top: 0px;
+        /* width: 40px;
+        right: 10px; */
+        position: sticky;
         transition: 1s;
     }
 
@@ -381,13 +386,14 @@ footer p{
         height: 85vh;
     }
     .container{
+        margin-top: 220px;
         margin-right: 50px;
         margin-left: 50px;
         flex-direction: column;
     }
     .logo img{
         margin-top: 50px;
-        width: 150px;
+        width: 50%;
     }
     .home-text{
         margin-top: 50px;
@@ -404,7 +410,7 @@ footer p{
     /*-----Social-Icons-----*/
     .social-icons img{
         width: 30px;
-        margin: 15px auto;
+        margin: 20px
     }
     /*-----Tentang-----*/
     .tentang-left-col, .tentang-right-col{
@@ -422,7 +428,7 @@ footer p{
     }
     /*-----Galeri-----*/
     #galeri {
-        margin-top: 3rem;
+        margin-top: 15rem;
     }
     .galeri-col{
         flex-basis: 100%;
