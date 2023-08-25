@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rafid Web</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  </head>
+
+  <body>
+    <!--------------------- Header --------------------->
+
+    <header>
+      <nav id="sideNav">
+        <ul id="menu">
+          <li><a href="#logo1">BERANDA</a></li>
+          <li><a href="#galeri">GALERI</a></li>
+          <li><a href="#motivasi">MOTIVASI</a></li>
+          <li><a href="#creator">PEMBUAT</a></li>
+        </ul>
+      </nav>
+      <img src="assets/images/menu.png" id="menuBtn" />
+    </header>
+
+    <main>
+      <!--******************** Home **********************-->
+      <div class="logo" id="logo1">
+        <img src="assets/images/raf.icon.png" />
+      </div>
+
+      <article id="home">
+        <div class="container">
+          <div class="home-text">
+            <h1>Selamat datang di Website Rafid!</h1>
+            <p>
+              Selamat datang di halaman web saya! Saya senang bisa berbagi
+              tentang hobi-hobi yang saya gemari. Ayo, mari kita jelajahi
+              bersama!
+            </p>
+            <a href="#galeri">
+              <button id="homeBtn">Lihat Lebih Detail</button>
+            </a>
+          </div>
+          <div class="content-image">
+            <img src="assets/images/rafid.png" alt="" />
+          </div>
+        </div>
+      </article>
+
+      <!--****************** Hobi ***********************-->
+
+      <article id="galeri">
+        <div class="galeri-text">
+          <h1>Hobi</h1>
+          <p>
+            Disini kamu bisa mengetahui hobi saya saat ini, untuk mengisi waktu
+            luang dengan kesibukan.
+          </p>
+        </div>
+        <div class="galeri-row">
+          <div class="galeri-col card">
+            <img src="assets/images/buku.jpeg" alt="buku" />
+            <h4>Membaca</h4>
+            <p>Saya biasanya membaca buku ataupun komik.</p>
+          </div>
+          <div class="galeri-col card">
+            <img src="assets/images/setup.jpg" />
+            <h4>Bermain Game</h4>
+            <p>
+              Game yang sering saya mainkan yaitu valorant, mobile legends, dan
+              war thunder.
+            </p>
+          </div>
+          <div class="galeri-col card">
+            <img src="assets/images/Olga.jpeg" />
+            <h4>Olahraga</h4>
+            <p>
+              Olahraga yang biasa lakukan yaitu workout, basket, berenang,
+              badminton.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!--***************** motivasi ******************-->
+
+      <article id="motivasi">
+        <div class="tentang-left-col">
+          <img src="assets/images/backgroundpeople.jpg" />
+        </div>
+        <div class="tentang-right-col">
+          <div class="tentang-text">
+            <h1>Quote</h1>
+            <br />
+            <h2>Il dolce far niente</h2>
+            <br />
+            <p><strong>Means:</strong> "The sweetness of doing nothing"</p>
+            <br />
+            <p>
+              <strong>Lessons:</strong> Take time to recharge. (you'll have your
+              most creative ideas if you give your mind a rest anyway.)
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!---------------------- Aside ---------------------->
+
+    <aside id="creator">
+      <article class="cardProfile">
+        <header>
+          <h3>Pembuat</h3>
+          <br />
+          <figure>
+            <img src="assets/images/rafid.png" />
+          </figure>
+          <br />
+          <h3>Rafid Al Khairy</h3>
+          <br />
+        </header>
+        <section>
+          <div>
+            <h3>Email</h3>
+            <h5>drome.emord@gmail.com</h5>
+          </div>
+          <div>
+            <h3>Instagram</h3>
+            <h5>rafidal._</h5>
+          </div>
+        </section>
+      </article>
+    </aside>
+
+    <!--------------------- Footer ----------------------->
+
+    <footer>
+      <div>
+        <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+      </div>
+    </footer>
+
+    <!---------------- social-icons -------------------->
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/rrafidd" target="_blank">
+        <img src="assets/images/facebook.png" />
+      </a>
+      <a href="https://www.instagram.com/rafidal._" target="_blank">
+        <img src="assets/images/instagram.png" />
+      </a>
+    </div>
+
+    <!------------------- Script --------------------->
+
+    <script>
+      var menuBtn = document.getElementById('menuBtn');
+      var sideNav = document.getElementById('sideNav');
+
+      sideNav.style.right = '-250px';
+      menuBtn.onclick = function () {
+        if (sideNav.style.right == '-250px') {
+          sideNav.style.right = '0';
+        } else {
+          sideNav.style.right = '-250px';
+        }
+      };
+      var scroll = new SmoothScroll('a[href*="#"', {
+        speed: 1000,
+        speedAsDuration: true,
+      });
+    </script>
+  </body>
+</html>
